@@ -33,24 +33,34 @@ public class M2ArrayChallenge
 	public static boolean contains(int[] array, int value)
 	{
 		// TODO: return the correct value
-		for (int i = 0; i < array.length; ++i) {
+		for (int i = 0; i < array.length; ++i) {	// iterates thru array, if value is found method evaluates to true
 			if (array[i] == value) {
 				return true;
 			}
 		}
-		return false;
+		
+		return false;								// else returns false, no need to type else
 	}
+
 	
 	// Use this template for the methods
 	/**
 	 * Purpose:
 	 * 
 	 * @param array
+	 * @return 
 	 * @return
 	 */
-//	public static ??? ???(???[] array)
-//	{
-//		return ???;
-//	}
-
+	public static int find(int[] array, int value)
+	{
+		if (array.length > 0) {
+			for (int i = 0; i < array.length; ++i)
+				if (array[i] == value) {
+					return i;
+				}
+		}
+		
+		
+		return -1;
+	}
 }
